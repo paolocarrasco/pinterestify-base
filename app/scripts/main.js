@@ -1,3 +1,8 @@
-import greeting from './app';
+import './plugin';
+import data from './data.js';
 
-greeting(3936456);
+$(document).ready(function () {
+	// $("#imagenes").pinterestify({
+	// 	data
+	// });
+});
