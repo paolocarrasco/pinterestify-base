@@ -10,6 +10,7 @@
     <!-- Place favicon.ico in the root directory -->
 
     <!-- build:css styles/vendor.css -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
     <!-- bower:css -->
     <!-- endbower -->
     <!-- endbuild -->
@@ -27,25 +28,78 @@
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <div class="container">
-      <div class="header">
-        <ul class="nav nav-pills float-right">
-          <li class="nav-item">
-            <a class="nav-link active" href="#">Inicio</a>
-          </li>
-          <li>
-            <a class="nav-link" href="#">Sobre nosotros</a>
-          </li>
-        </ul>
-        <h3 class="text-muted">Pinterestify</h3>
-      </div>
+    <header>
+      <ul class="a-menu">
 
-      <div class="footer">
-        <p>Con ♥ de Laboratoria</p>
-      </div>
+        <li><a href="#" class="red"><span class="fa-stack fa-lg">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-pinterest fa-stack-1x fa-inverse"></i></span></a>
+        </li>
+        <li class="input-caja">
+          <div class="caja-lupa">
+            <i class="fa fa-search" aria-hidden="true"></i>
+            <input type="text" placeholder="wedding">
+            <i class="fa fa-times" aria-hidden="true"></i>
+          </div>
+          <div class="caja-pins">
+            <span>All Pins <i class="fa fa-chevron-down" aria-hidden="true"></i></span>
+          </div>
+        </li>
+        <li><a href="#"><span class="fa-stack fa-lg">
+          <i class="fa fa-circle fa-stack-2x white"></i>
+          <i class="fa fa-user fa-stack-1x"></i></span></a>
+        </li>
+        <li><a href="#"><span class="fa-stack fa-lg">
+          <i class="fa fa-circle fa-stack-2x white"></i>
+          <i class="fa fa-bars fa-stack-1x"></i></span></a>
+        </li>
+        <li><a href="#"><span class="fa-stack fa-lg">
+          <i class="fa fa-circle fa-stack-2x white"></i>
+          <i class="fa fa-commenting fa-stack-1x"></i></span></a>
+        </li>
+      </ul>
+      <ul class="sub-menu">
+        <div class="botones botones-1">
+          <p class="light">Ideas</p>
+        </div>
+        <div class="botones botones-2">
+          <p>Dresses</p>
+        </div>
+        <div class="botones botones-3">
+          <p class="light">Colors</p>
+        </div>
+        <div class="botones botones-4">
+          <p>Games</p>
+        </div>
+        <div class="botones botones-5">
+          <p class="light">Decorations</p>
+        </div>
+        <div class="botones botones-6">
+          <p>Rings</p>
+        </div>
+        <div class="botones botones-7">
+          <p class="light">Hairstyles</p>
+        </div>
+        <div class="botones botones-8">
+          <p>Planning</p>
+        </div>
+        <div class="botones botones-9">
+          <p class="light">Fall</p>
+        </div>
+      </ul>
+    </header>
+
+    <section id="imagenes" class="imagenes">
+      <!-- Aqui van los post de pinterest -->
+    </section>
+
+    <div class="loading">
+      <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+      <span class="sr-only">Loading...</span>
     </div>
 
     <!-- build:js scripts/vendor.js -->
+    <script src="https://use.fontawesome.com/d2c9b2c5c1.js"></script>
     <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
     <script src="/bower_components/popper.js/dist/umd/popper.js"></script>
