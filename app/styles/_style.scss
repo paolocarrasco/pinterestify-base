@@ -1,0 +1,260 @@
+//estilos menu
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+header{
+	position: fixed;
+	background-color: $white;
+	z-index: 1000;
+}
+.a-menu{
+	display: inline-block;
+	text-align: center !important;
+	padding: 10px 0;
+	width: 100%;
+	margin: 0;
+	border-bottom: 1px solid lightgray;
+	li{
+		display: inline-block;
+		font-size: 16px;
+		font-weight: 700;
+		padding: 0 5px;
+		i{
+			padding: 0;
+		}
+		a{
+			padding: 0;
+			color: $dark_gray;
+			text-decoration: none;
+		}
+		.red{
+			color: #BD081C;
+		}
+		.white{
+			color: #fff;
+		}
+		.white:hover{
+			color: #EFEFEF;
+		}
+	}
+	.input-caja{
+		background-color: #EFEFEF;
+		border-radius: 5px;
+		margin: 0 16px 0;
+		display: inline-block;
+		width: 70%;
+		padding: 10px;
+		.caja-lupa{
+			display: inline-block;
+			width: 85%;
+			input{
+				width: 93%;
+				border: none;
+				line-height: 20px;
+				font-size: 18px;
+				outline: none;
+				background-color: transparent;
+			}
+		}
+		.caja-pins{
+			display: inline-block;
+		}
+	}
+}
+
+.sub-menu{
+	display: inline-block;
+	text-align: center !important;
+	padding: 10px 0;
+	width: 100%;
+	margin: 0;
+	.botones{
+		display: inline-block;
+		p{
+			background-color: rgba(150,110,75,0.8);
+			color: $white;
+			padding: 20px 25px;
+			font-weight: bold;
+			border-radius: 6px;
+		}
+		p.light{
+			background-color: rgba(194,149,110,0.5);
+			color: $white;
+			padding: 20px 25px;
+			font-weight: bold;
+			border-radius: 6px;
+		}
+	}
+	@for $i from 1 through 9{
+		.botones-#{$i}{
+			border-radius: 6px;
+			background-image: url(../images/#{$i}.jpg);
+			background-size:cover;
+			background-position: center;
+			margin: 0 5px;
+		}
+	}
+}
+
+.imagenes{
+	display: inline-block;
+	padding: 0 80px;
+	margin-top: 150px;
+
+	-moz-column-width: 220px;
+	-webkit-column-width: 220px;
+	column-width: 220px;
+
+	-moz-column-count: 4;
+	-webkit-column-count: 4;
+	column-count: 4;
+
+	-moz-column-gap: 20px;
+	-webkit-column-gap: 20px;
+	column-gap: 20px;
+
+	.post{
+		display: inline-block;
+		cursor: pointer;
+		margin-bottom: 20px;
+		.text{
+			float: left;
+			width: 70%;
+			margin-top: 15px;
+		}
+		img{
+			width: 100%;
+			border-radius: 20px;
+		}
+		h4{
+			margin-bottom: 10px;
+		}
+		.views{
+			span{
+			margin-top: 18px;
+			font-size: 10px;
+			font-weight: normal;
+			float: right;
+			width: 30%;
+			color: $dark_gray;
+			}
+		}
+		.porcion-usuario{
+			margin-top: 12px;
+			font-size: 15px;
+			.circulo-color{
+				width: 30px;
+				height: 30px;
+				background-color: #d597a1;
+				border-radius: 50px;
+				margin-right: 3px;
+				margin-top: -5px;
+				text-align: center;
+				float: left;
+				.usuario-circulo{
+					color: $white;
+					font-weight: bold;
+					position:relative;
+					top: 6px;
+				}
+			}
+			.usuario-nombre{
+				font-weight: bold;
+			}
+		}
+	}
+}
+
+.modal{
+	position: fixed;
+	z-index: 2000;
+	background-color: #EEEEEE; //gris
+	width: 100%;
+	height: 100%;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	overflow-y: scroll;
+	.close{
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		cursor: pointer;
+		z-index: 500;
+		color: $dark_gray;
+	}
+	.cuadro-blanco{
+		background-color: $white;
+		border-radius: 10px;
+		padding: 30px;
+		width: 45%;
+		margin: 0 auto;
+		margin-top: 30px;
+		.contenedor-save{
+			display: inline-block;
+			li{
+				display: inline-block;
+				margin-right: 20px;
+				a{
+					text-decoration: none;
+					color: $dark_gray;
+				}
+			}
+			.right{
+				margin-left: 340px;
+				margin-right: 0;
+				text-align: right;
+				background-color: $burgundy;
+				border-radius: 6px;
+				padding: 10px 20px;
+				a{
+					color: $white;
+				}
+			}
+		}
+		h2{
+			margin: 15px 0;
+		}
+		img{
+			margin: 0 auto;
+			border-radius: 10px;
+			text-align: center;
+			width: 100%;
+			max-width: 100%;
+		}
+		.contenedor-texto{
+			margin-top: 20px;
+			.circulo-color2{
+				background-color: #d597a1;
+				width: 50px;
+				height: 50px;
+				border-radius: 50px;
+				margin-right: 5px;
+				text-align: center;
+				float: left;
+				span{
+					font-size: 25px;
+					font-weight: bold;
+					color: $white;
+					position:relative;
+					top: 10px;
+				}
+			}
+			span{
+				font-weight: bold;
+				font-size: 20px;
+			}
+			.modal-descrip{
+				margin-top: 20px;
+			}
+		}
+	}
+}
+
+.loading{
+	margin: 0 auto;
+	text-align: center;
+}
