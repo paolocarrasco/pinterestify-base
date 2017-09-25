@@ -2,6 +2,6 @@
   "name": "pinterestify",
   "private": true,
   "dependencies": {
-    "bootstrap": "~4.0.0-alpha.6"
+    "jquery": "^3.2.1"
   }
 }
