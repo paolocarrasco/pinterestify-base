@@ -1,4 +1,4 @@
-import './plugin';
+import pinterestify from './plugin';
 import data from './data.js';
 
 $(document).ready(function () {
