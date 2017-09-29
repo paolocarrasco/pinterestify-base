@@ -1,9 +1,6 @@
-import mostrarPines from './plugin';
 import data from './data.js';
+import './pinterestify-plugin';
 
-$(document).ready(function () {
-  // $("#imagenes").pinterestify({
-  //   data
-  // });
-  mostrarPines(data);
+$(() => {
+  $(".imagenes").pinterestify({data});
 });
