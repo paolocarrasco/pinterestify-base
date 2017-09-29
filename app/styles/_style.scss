@@ -178,6 +178,9 @@ header{
 	left: 0;
 	right: 0;
 	overflow-y: scroll;
+	&.inactivo {
+		display: none;
+	}
 	.close{
 		position: absolute;
 		top: 20px;
