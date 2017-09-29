@@ -1,8 +1,7 @@
 const viewModal = (containerModal, pin) => {
   containerModal.on('click', '.post', function(){
-    const id = $(this).attr('id');
+    const id = $(this).closest('div').data('id');
     const [pines] = pin.filter(pines => pines.id == id);
-      console.log(pines);
     const modal = $('.modal');
 
     modal.removeClass('inactivo');
