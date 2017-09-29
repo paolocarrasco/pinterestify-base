@@ -1,4 +1,4 @@
 import './plugin';
-import data from './data.js';
+import pines from './data.js';
 
-  $("#imagenes").pinterestify({pines:data});
+  $("#imagenes").pinterestify({pines});

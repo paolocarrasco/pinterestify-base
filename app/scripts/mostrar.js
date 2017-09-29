@@ -1,4 +1,4 @@
-const mostrarPines = pines  => {
+const mostrarPines =(pines, contener)  => {
   const listadoPines = [];
 
   pines.forEach(pins => {
@@ -29,6 +29,6 @@ const mostrarPines = pines  => {
     listadoPines.push(htmlPines);
   });
 
-$('#imagenes').html(listadoPines.join(''));
+contener.html(listadoPines.join(''));
 };
 export default mostrarPines;
