@@ -20,8 +20,8 @@ $.fn.pinterestify = function(options){
     modal.find('.post--username').html(username.charAt(0).toUpperCase());
     modal.find('.post--user').text(user);
     // modal.find('.post--user').html(user).splice(0,1).toUpperCase();
-    modal.find('post--hashtag').text(hashtag);
-    modal.find('post--description').text(description);
+    modal.find('.post--hashtag').text('#'+hashtag);
+    modal.find('.post--description').text(description);
 
     modal.on('click', () =>{
       modal.addClass('inactivo');
