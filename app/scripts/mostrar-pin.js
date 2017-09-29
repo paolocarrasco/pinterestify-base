@@ -3,20 +3,23 @@ const mostrarPin = (pinContainer, pines) => {
       const id = $(this).attr('id');
       const modal = $('.modal');
       const [pin] = pines.filter(pin => pin.id == id);
-      modal.show();
+      modal.removeClass('inactivo');
       const {description, image_url, title, username, user, hashtag} = pin;
       modal.find('.post--title').text(title);
       modal.find('.post--image').attr('src', `images/${image_url}`);
-      modal.find('.post--username').text(username);
+      const firstletter = username.charAt(0).toUpperCase();
+      alert(firstletter);
+      modal.find('.post--username').text(firstletter);
       modal.find('.post--user').text(user);
       modal.find('.post--hashtag').text(`#${hashtag}`);
       modal.find('.post--description').text(description);
     }); 
-
+    
     $('.close').on('click', function(e){
       e.preventDefault();
-      $('.modal').hide();
+      $('.modal').addClass('inactivo');
     });
+    
   };
 
   export default mostrarPin;

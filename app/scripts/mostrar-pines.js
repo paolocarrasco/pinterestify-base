@@ -2,6 +2,8 @@ const mostrarPines = (pines, contenedorPin) => {
   const listadoPines = [];
   
   pines.forEach(pin => {
+    const firstletter = pin.username.charAt(0).toUpperCase();
+    
     const htmlPines = `
       <div class='post' id='${pin.id}' data-description='${pin.description}'>
         <img class='image' src='images/${pin.image_url}' alt='${pin.title}'>
@@ -10,7 +12,7 @@ const mostrarPines = (pines, contenedorPin) => {
           <p>${pin.description}</p>
           <div class='porcion-usuario'>
             <div class='circulo-color'>
-              <span class='usuario-circulo username'>${pin.username}</span>
+              <span class='usuario-circulo username'>${firstletter}</span>
             </div>
             <span class='usuario-nombre user'>${pin.user}</span>
             <span class='hashtag'>#${pin.hashtag}</span>
