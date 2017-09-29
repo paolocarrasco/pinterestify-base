@@ -1,5 +1,6 @@
 const mostrarPines = (container, pines) => {
   const listaPines = [];
+
   pines.forEach(currentPin => {
     const pin = `
       <div class='post' id='${currentPin.id}' data-description='${currentPin.description}'>
@@ -22,6 +23,7 @@ const mostrarPines = (container, pines) => {
           </span>
         </div>
       </div>`;
+      
     listaPines.push(pin);
   });
   container.html(listaPines.join(''));
