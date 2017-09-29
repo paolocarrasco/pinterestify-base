@@ -1,8 +1,11 @@
 import './plugin';
-import data from './data.js';
+import items from './dataSubMenu.js';
+import pines from './dataPines.js';
 
 $(document).ready(function () {
-  // $("#imagenes").pinterestify({
-  //   data
-  // });
+  //contenedor.pluging(data);
+  $('.sub-menu').menu({items});
+  $('.imagenes').pinterestify({pines});
+  console.log(pines);
+  
 });
