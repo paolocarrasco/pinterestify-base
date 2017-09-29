@@ -1,9 +1,10 @@
+import getName from './get-name';
+
 const mostrarPines = (pines, contenedorPin) => {
   const listadoPines = [];
-  
+
   pines.forEach(pin => {
-    const firstletter = pin.username.charAt(0).toUpperCase();
-    
+    const firstletter = getName(pin.username);
     const htmlPines = `
       <div class='post' id='${pin.id}' data-description='${pin.description}'>
         <img class='image' src='images/${pin.image_url}' alt='${pin.title}'>
