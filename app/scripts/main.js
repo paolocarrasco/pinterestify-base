@@ -1,8 +1,7 @@
-import './plugin';
 import data from './data.js';
+import './mery-plugin';
 
 $(document).ready(function () {
-  // $("#imagenes").pinterestify({
-  //   data
-  // });
+  // Llamando al plugin para mostrar pines
+  $("#imagenes").pinterestify(data);
 });
