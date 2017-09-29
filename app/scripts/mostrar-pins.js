@@ -1,18 +1,18 @@
 const mostrarPins = (pin, contenedorPins) => {
   const ListaPins = [];
   pin.forEach(item => {
-    console.log(item);
-    const htmlPins = `<div class='post' id="${item.id}" data-description="${item.description}">
-                        <img class='image' src="images/${item.image_url}" alt='Fuke zisukje bu dibas sik.'>
+    const {id, title, description, user, image_url, username, hashtag} = item;
+    const htmlPins = `<div class='post' id="${id}" data-description="${description}">
+                        <img class='image' src="images/${image_url}" alt='${title}'>
                         <div class='text'>
-                          <h4 class='title'>${item.title}</h4>
-                          <p>Jusola mud afeafu ti mu.</p>
+                          <h4 class='title'>${title}</h4>
+                          <p>${description}</p>
                           <div class='porcion-usuario'>
                             <div class='circulo-color'>
-                              <span class='usuario-circulo username'>${item.username}</span>
+                              <span class='usuario-circulo username'>${username.charAt(0).toUpperCase()}</span>
                             </div>
-                            <span class='usuario-nombre user'>${item.user}</span>
-                            <span class='hashtag'>${item.hashtag}</span>
+                            <span class='usuario-nombre user'>${user}</span>
+                            <span class='hashtag'>${hashtag}</span>
                           </div>
                         </div>
                         <div class='views'>
@@ -22,8 +22,6 @@ const mostrarPins = (pin, contenedorPins) => {
                           </span>
                         </div>
                       </div>`;
-
-
 
     ListaPins.push(htmlPins);
   });

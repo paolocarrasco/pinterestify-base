@@ -1,22 +1,20 @@
 const modalPin = (pinContainer, data) => {
+
   const modal = $('.modal');
+
   pinContainer.on('click', '.post', function(){
     const id = $(this).attr('id');
-
     const [pin] = data.filter(pin => pin.id == id);
-
     modal.removeClass('inactive');
+    const {title, description, user, image_url, username, hashtag} = pin;
 
-    const {title} = pin;
-
-    modal.find('.post--title').text(pin.title);
-    modal.find('.post--image').attr(`src`, `images/${pin.image_url}`);
-    modal.find('.post--username').text(pin.username);
-    modal.find('.post--user').text(pin.user);
-    modal.find('.post--hashtag').text(pin.hashtag);
-    modal.find('.post--description').text(pin.description);
-
-    console.log(pin);
+    modal.find('.post--title').text(title);
+    modal.find('.post--image').attr(`src`, `images/${image_url}`);
+    modal.find('.post--image').attr(`alt`, title);
+    modal.find('.post--username').text(username.charAt(0).toUpperCase());
+    modal.find('.post--user').text(user);
+    modal.find('.post--hashtag').text(hashtag);
+    modal.find('.post--description').text(description);
 
   });
 
