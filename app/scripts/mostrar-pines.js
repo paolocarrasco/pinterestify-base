@@ -1,6 +1,6 @@
 const mostrarPines =(data,container)=>{
   const listadoPines = [];
-  data.forEach( pin => {
+  data.forEach(pin=> {
     const htmlPines = `
     <div class='post' id='${pin.id}' data-description='${pin.description}'>
        <img class='image' src='images/${pin.image_url}' alt='${pin.title}'>
@@ -12,7 +12,7 @@ const mostrarPines =(data,container)=>{
                <span class='usuario-circulo username'>N</span>
            </div>
            <span class='usuario-nombre user'>${pin.user}</span>
-           <span class='hashtag'>#Chic</span>
+           <span class='hashtag'>#${pin.username}</span>
          </div>
        </div>
        <div class='views'>
