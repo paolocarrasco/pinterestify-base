@@ -178,6 +178,7 @@ header{
 	left: 0;
 	right: 0;
 	overflow-y: scroll;
+    display: block;
 	.close{
 		position: absolute;
 		top: 20px;
@@ -252,6 +253,9 @@ header{
 			}
 		}
 	}
+    &.inactivo {
+     display: none; 
+    }
 }
 
 .loading{
