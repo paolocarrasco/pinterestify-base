@@ -1,20 +1,28 @@
 const resaltarImagen = (imgContainer, imagenes) => {
 
+  console.log(imagenes);
+  
+  imgContainer.on('click', '.post', function(){
   imgContainer.on('click', '.post', function(){
 
-    const id = $(this).attr('id');
-
-
-    const modal = $('.modal');
     console.log(imagenes);
-    const [imagen] = imagenes.filter(imagen => imagen.id == id);
+     const id = $(this).attr('id');
+     const modal = $('.modal');
 
-    modal.removeClass('inactivo');
+     $.each(imagenes,function(i,e){
 
-    const {nombre, descripcion} = ciudad;
+       const [imagen] = e.filter(imagen => imagen.id == id);
+       console.log(imagen);
+       modal.removeClass('inactivo');
+       const {title,description ,user ,image_url,username , hashtag } = imagen;
 
-    modal.find('h2').text(nombre);
-    modal.find('span').text(descripcion);
+       modal.find('.post--title').text(title);
+       modal.find('.post--image').attr('src',`images/${image_url}`);
+       modal.find('post--user').text(user);
+       modal.find('post--hashtag').text(hashtag);
+       modal.find('post--description').text(description);
+      });
+
   });
 };
 
