@@ -250,7 +250,11 @@ header{
 			.modal-descrip{
 				margin-top: 20px;
 			}
+
 		}
+	}
+	&.inactivo {
+		display: none; 
 	}
 }
 
