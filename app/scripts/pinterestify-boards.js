@@ -10,7 +10,7 @@ const mostrarBoards = (pines, contenedorBoards) => {
           <p>${pin.description}</p>
           <div class='porcion-usuario'>
             <div class='circulo-color'>
-              <span class='usuario-circulo username'>N</span>
+              <span class='usuario-circulo username'>${pin.username.charAt(0).toUpperCase()}</span>
             </div>
             <span class='usuario-nombre user'>${pin.user}</span>
             <span class='hashtag'>${pin.hashtag}</span>
