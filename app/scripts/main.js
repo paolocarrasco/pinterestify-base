@@ -1,8 +1,10 @@
 import './plugin';
-import data from './data.js';
+import data from './data';
+// import mostrarImagenes from './app';
 
-$(document).ready(function () {
-  // $("#imagenes").pinterestify({
-  //   data
+// $(() => {
+  console.log(data);
+  // console.log(mostrarImagenes);
+  // mostrarImagenes(data);
+  $("#imagenes").pinterestify({data});
   // });
-});
