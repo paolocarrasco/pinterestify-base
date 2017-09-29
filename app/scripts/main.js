@@ -1,6 +1,6 @@
-import pins from './plugin.js';
+import './plugin.js';
 import data from './data.js';
 
-$(document).ready(function () {
- pins(data);
+$(() => {
+ $(".imagenes").pinterestify({data});
 });
