@@ -10,7 +10,7 @@ console.log(pines);
           <p>${pin.description}</p>
           <div class='porcion-usuario'>
             <div class='circulo-color'>
-              <span class='usuario-circulo username'>C</span>
+              <span class='usuario-circulo username'>${pin.username.charAt(0).toUpperCase()}</span>
             </div>
             <span class='usuario-nombre user'>${pin.user}</span>
             <span class='hashtag'>#${pin.hashtag}</span>
@@ -19,7 +19,7 @@ console.log(pines);
         <div class='views'>
           <span>
             <i class='fa fa-thumb-tack' aria-hidden='true'></i>
-            36,6k <i class='fa fa-check' aria-hidden='true'>88</i>
+            36,6k <i class='fa fa-check' aria-hidden='true'>${pin.id*7}</i>
           </span>
         </div>
       </div>`;
@@ -28,5 +28,6 @@ console.log(pines);
   });
 
   contenedorPines.html(listadoPines.join(''));
+
 };
 export default mostrarPines;

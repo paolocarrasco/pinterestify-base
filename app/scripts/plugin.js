@@ -1,8 +1,8 @@
 import mostrarPines from './mostrar_pines';
-//import resaltarCiudad from './resaltar-ciudad';
+import mostrarModal from './mostrar_modal';
 
 $.fn.pinterestify = function(opciones){
   const {pines} = opciones;
   mostrarPines(pines, $(this));
- // resaltarCiudad($(this), ciudades);
+  mostrarModal($(this), pines);
 };
