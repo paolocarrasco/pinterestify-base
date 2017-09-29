@@ -19,5 +19,8 @@ $.fn.pinterestify = function(dataPines){
       modal.find('.post--hashtag').text(`#${hashtag}`);
       modal.find('.post--description').text(description);
   });
+  $('.close').on('click', function(){
+     $('.modal').addClass('inactivo'); 
+  });
 };
 
