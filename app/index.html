@@ -19,9 +19,6 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
 
-    <!-- build:js scripts/vendor/modernizr.js -->
-    <script src="/bower_components/modernizr/modernizr.js"></script>
-    <!-- endbuild -->
   </head>
   <body>
     <!--[if IE]>
@@ -30,7 +27,6 @@
 
     <header>
       <ul class="a-menu">
-
         <li><a href="#" class="red"><span class="fa-stack fa-lg">
           <i class="fa fa-circle fa-stack-2x"></i>
           <i class="fa fa-pinterest fa-stack-1x fa-inverse"></i></span></a>
@@ -93,11 +89,42 @@
       <!-- Aqui van los post de pinterest -->
     </section>
 
-    <div class="loading">
-      <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
-      <span class="sr-only">Loading...</span>
+    <div class='modal inactivo'>
+      <div class='close'>
+        <i class='fa fa-times fa-2x' aria-hidden='true'></i>
+      </div>
+      <div class='cuadro-blanco'>
+        <div class='contenedor-save'>
+          <ul>
+            <li>
+              <a href='#'><i class='fa fa-upload fa-lg' aria-hidden='true'></i></a>
+            </li>
+            <li>
+              <a href='#'><i class='fa fa-check fa-lg' aria-hidden='true'></i></a>
+            </li>
+            <li>
+              <a href='#'><i class='fa fa-ellipsis-h fa-lg' aria-hidden='true'></i></a>
+            </li>
+            <li class='right'>
+              <a href='#'><i class='fa fa-thumb-tack fa-lg' aria-hidden='true'></i> Save</a>
+            </li>
+          </ul>
+        </div>
+        <h2 class='post--title'></h2>
+        <img class='post--image' src='' alt='Fuke zisukje bu dibas sik.'/>
+        <div class='contenedor-texto'>
+          <div class='circulo-color2'>
+            <span class='usuario-circulo2 post--username'>N</span>
+          </div>
+          <span class='post--user'></span>
+          <p class='hashtag2 post--hashtag'></p>
+          <div class='modal-descrip'>
+            <p class='post--description'></p>
+          </div>
+        </div>
+      </div>
     </div>
-
+      
     <!-- build:js scripts/vendor.js -->
     <script src="https://use.fontawesome.com/d2c9b2c5c1.js"></script>
     <!-- bower:js -->
@@ -108,17 +135,6 @@
     <!-- endbuild -->
 
     <!-- build:js scripts/plugins.js -->
-    <script src="/bower_components/bootstrap/js/dist/util.js"></script>
-    <script src="/bower_components/bootstrap/js/dist/alert.js"></script>
-    <script src="/bower_components/bootstrap/js/dist/button.js"></script>
-    <script src="/bower_components/bootstrap/js/dist/carousel.js"></script>
-    <script src="/bower_components/bootstrap/js/dist/collapse.js"></script>
-    <script src="/bower_components/bootstrap/js/dist/dropdown.js"></script>
-    <script src="/bower_components/bootstrap/js/dist/modal.js"></script>
-    <script src="/bower_components/bootstrap/js/dist/scrollspy.js"></script>
-    <script src="/bower_components/bootstrap/js/dist/tab.js"></script>
-    <script src="/bower_components/bootstrap/js/dist/tooltip.js"></script>
-    <script src="/bower_components/bootstrap/js/dist/popover.js"></script>
     <!-- endbuild -->
 
     <!-- build:js scripts/main.js -->
