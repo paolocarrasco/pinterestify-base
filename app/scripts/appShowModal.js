@@ -1,31 +1,40 @@
 const showModal = (contenedorPin) => {
-     $(contenedorPin).on('click','.post',function(){
-
+     $(contenedorPin).on('click', '.post', function() {
+        $('.modal').removeClass('inactiveModal');
            const title = $(this).find('h4').text();
-           const image = $(this).find('img').attr('src');
-        /*
-        <h2 class='post--title'>Fuke zisukje bu dibas sik.</h2>
-        <img class='post--image' src='images/1.jpg' alt='Fuke zisukje bu dibas sik.'/>
-        <div class='contenedor-texto'>
-          <div class='circulo-color2'>
-            <span class='usuario-circulo2 post--username'>N</span>
-          </div>
-          <span class='post--user'>Ernest Barber</span>
-          <p class='hashtag2 post--hashtag'>#Chic</p>
-          <div class='modal-descrip'>
-            <p class='post--description'>Jusola mud afeafu ti mu.</p>
-          </div>
-        */
+           const url = $(this).find('img').attr('src');
+           const alt = $(this).find('img').attr('alt');
+           const username = $(this).find('.username').text();
+           const user = $(this).find('.user').text();
+           const hashtag = $(this).find('.hashtag').text();
+           const description = $(this).find('p').text();
 
-
-           $('.modal').toggle();
-           $('.modal').on('click','cuadro-blanco',function(){
-               $(this).find
-           })
-           $('.modal').find('.cuadro-blanco').find('h2').val(title);
+           $('.modal').find('.cuadro-blanco').empty()
+                                             .append(`<div class='contenedor-save'>
+                                                      <ul>
+                                                        <li><a href='#'><i class='fa fa-upload fa-lg' aria-hidden='true'></i></a></li>
+                                                        <li><a href='#'><i class='fa fa-check fa-lg' aria-hidden='true'></i></a></li>
+                                                        <li><a href='#'><i class='fa fa-ellipsis-h fa-lg' aria-hidden='true'></i></a></li>
+                                                        <li class='right'><a href='#'><i class='fa fa-thumb-tack fa-lg' aria-hidden='true'></i>Save</a></li>
+                                                     </ul>
+                                                     </div>`)
+                                            .append(`<h2 class='post--title'>${title}</h2>
+                                                    <img class='post--image' src=${url} alt=${alt}/>
+                                                    <div class='contenedor-texto'>
+                                                    <div class='circulo-color2'>
+                                                    <span class='usuario-circulo2 post--username'>${username}</span>
+                                                    </div>
+                                                    <span class='post--user'>${user}</span>
+                                                    <p class='hashtag2 post--hashtag'>#${hashtag}</p>
+                                                    <div class='modal-descrip'>
+                                                    <p class='post--description'>${description}</p>
+                                                    </div>`).wrap('<div></div>');
         })
-        
+
+        $('.modal').on('click', function(){
+            $(this).addClass('inactiveModal');
+               
+        })
            
-          };
-        
-          export default showModal;
+};
+export default showModal;

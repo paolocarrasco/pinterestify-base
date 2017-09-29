@@ -6,6 +6,6 @@ $(document).ready(function () {
   //contenedor.pluging(data);
   $('.sub-menu').menu({items});
   $('.imagenes').pinterestify({pines});
-  console.log(pines);
+ 
   
 });

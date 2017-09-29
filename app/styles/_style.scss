@@ -178,7 +178,6 @@ header{
 	left: 0;
 	right: 0;
 	overflow-y: scroll;
-	display: none;
 	.close{
 		position: absolute;
 		top: 20px;
@@ -258,4 +257,8 @@ header{
 .loading{
 	margin: 0 auto;
 	text-align: center;
+}
+
+.inactiveModal {
+	display: none;
 }

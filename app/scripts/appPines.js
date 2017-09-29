@@ -1,6 +1,6 @@
 const showPines = (array, contenedorPines) => {
     const listadoPines = [];
-   $.each(array, function (index, obj) {
+    $.each(array, function (index, obj) {
         $.each(obj,function (key,value){
        
         const {id,description,title,image_url,username,user,hashtag} = value;
