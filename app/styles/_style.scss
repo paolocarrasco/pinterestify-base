@@ -1,4 +1,6 @@
 //estilos menu
+@import 'variables';
+
 *{
 	margin: 0;
 	padding: 0;
@@ -252,6 +254,9 @@ header{
 			}
 		}
 	}
+    &.inactivo{
+        display: none;
+    }
 }
 
 .loading{
