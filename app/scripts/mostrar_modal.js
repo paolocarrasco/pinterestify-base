@@ -1,13 +1,11 @@
 const mostrarModal = (modalContainer, pines) => {
+  
   const modal = $('.modal');
-  modalContainer.on('click', '.post', function () {
+  
+  modalContainer.on('click', '.post', () => {
     const id = $(this).attr('id');
-
-
     const [pin] = pines.filter(pin => pin.id == id);
-
     modal.removeClass('inactivo');
-
     const {
       description,
       hashtag,
@@ -26,7 +24,7 @@ const mostrarModal = (modalContainer, pines) => {
     $('.post--description').text(description);
   });
 
-  $('.close').on('click', function (e) {
+  $('.close').on('click', (e) => {
     e.preventDefault();
     $('.modal').addClass('inactivo');
   });
